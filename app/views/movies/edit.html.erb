@@ -1,0 +1,14 @@
+<div class="container well">
+	<h1>Edit This Movie</h1>
+	<div id="edit-form">
+		<%= form_for (@movie) do |f| %>
+			<%= f.label :title %>
+			<%= f.text_field :title %><br><br>
+
+			<%= f.label :note, "Note" %>
+			<%= f.text_area :note %><br><br>
+
+			<%= f.submit "Update Movie", class: "btn btn-success" %>
+		<% end %>
+	</div>
+</div>

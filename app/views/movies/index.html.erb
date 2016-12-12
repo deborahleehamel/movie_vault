@@ -1,3 +1,60 @@
 <div class="container">
   <h1>My MovieVault</h1>
+
+  <div class="add-movie-form text-center well">
+  <h2>Add a movie here!</h2>
+
+  <%= form_for (@add_movie) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :note, "Note" %>
+    <%= f.text_area :note %><br>
+
+
+    <%= f.submit "Add new movie", class: "btn btn-success" %>
+    <% end %>
+</div>
+
+<p></p>
+<p></p>
+<div id="return-data" class="panel panel-default">
+    <h2>All My Movies</h2>
+    <table id="movies-list" class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Note</th>
+            <th>Watched/Unwatched</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody id="movies-table">
+
+        <% current_user.movies.each do |movie| %>
+          <% if movie.watched %>
+            <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="moive watched" data-status="Watched">
+              <td classs="movie-title"><%= movie.title %></td>
+              <td class="movie-note"><%= movie.note %></td>
+              <td class="movie-status"><%= link_to "Mark as Unwatched", movie_path(movie, watched: false), method: :patch %>
+              </td>
+              <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+            </tr>
+          <% else %>
+            <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="movie unwatched" data-status="Unwatched">
+              <td class="movie-title"><%= movie.title %></td>
+              <td class="movie-note"><%= movie.note %></td>
+              <td class="movie-status"><%= link_to "Mark as Watched", movie_path(movie, watched: true), method: :patch %>
+              </td>
+              <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+
+            </tr>
+          <% end %>
+        <% end %>
+
+    </tbody>
+</table>
+
+  </div>
+
 </div>

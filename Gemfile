@@ -21,10 +21,12 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'database_cleaner'
-  gem 'selenium-webdriver'
   gem 'pry'
+  gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
+
+
 
 group :development do
   gem 'web-console'
