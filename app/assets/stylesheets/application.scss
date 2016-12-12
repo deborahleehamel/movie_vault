@@ -15,3 +15,11 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ .watched {
+  background-color: lightgray;
+}
+
+.unwatched {
+  background-color: lightgreen;
+}

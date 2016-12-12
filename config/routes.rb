@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "home#show"
 
-  namespace :api, defaults: { format: :json } do
+  namespace :api do
     namespace :v1 do
       resources :movies, only: [:update]
     end
