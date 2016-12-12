@@ -1,24 +1,35 @@
-# README
+# Movie Vault
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## LIVE in production at [Heroku](https://herokuapp.com/)
 
-Things you may want to cover:
+MovieVault is a small application for saving movies you might want to watch again or later.
 
-* Ruby version
+We build out a rails application that allows:
+an unauthenticated user to:
+* log in or sign up
 
-* System dependencies
+ an authenticated user to:
+  * sign up
+  * log in and sign out
+  * submit and view movies
+  * update movie status with options to "Mark as Watched" and "Mark as Unwatched" without reloading the page
+  * edit movies after they have added some to my MovieVault when viewing movies index
+  * mark a movie as watched or unwatched without reloading page
+  * filter list of movies by search term as I type
+  * click buttons/links to filter list by status("watched" and "unwatched")
+  * sort the list alphabetically
 
-* Configuration
+  Supporting features
 
-* Database creation
+  ## Installation
+  * `git clone https://github.com/deborahleehamel/movie_vault.git`
+  *  cd movie_vault
+  * `bundle`
+  * `rake db:create db:migrate`
 
-* Database initialization
+  ## To run in Development
+  * `rails s`
+  * Go to [http://localhost:3000](http://localhost:3000) in your browser.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  ## Testing
+  * rspec
