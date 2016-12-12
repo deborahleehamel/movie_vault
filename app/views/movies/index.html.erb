@@ -20,6 +20,11 @@
   <input type="text" class="form-control" id="search-box">
 </div>
 
+<div>
+    <h3>Filter Status:</h3>
+    <%= select("movie", "filter_status", ["All", "Watched", "Unwatched"], selected: "All") %>
+</div>
+
 <p></p>
 <p></p>
 <div id="return-data" class="panel panel-default">
