@@ -4,11 +4,9 @@
     <p>Don't lose your favorite or must see movies. Save them to watch again or watch later.</p>
 
     <div class="container">
-      <% if current_user %>
-        <%= link_to "Sign Out", "logout_path", class: "btn btn-primary" %> |
-      <% else %>
-        <%= link_to "Log In", "login_path", class: "btn btn-primary" %> |
-        <%= link_to "Sign Up", "users/new", class: "btn btn-primary" %>
+      <% if (!current_user) %>
+      <%= link_to "Log In", "/login", class: "btn btn-primary" %> |
+      <%= link_to "Sign Up", "users/new", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

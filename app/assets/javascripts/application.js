@@ -14,3 +14,9 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+  // updateStatus(id, status);
+  updateStatus();
+  searchMovies();
+});

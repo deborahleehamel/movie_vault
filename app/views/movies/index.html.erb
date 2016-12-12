@@ -6,14 +6,18 @@
 
   <%= form_for (@add_movie) do |f| %>
     <%= f.label :title %>
-    <%= f.text_field :title %><br>
+    <%= f.text_field :title %>
 
     <%= f.label :note, "Note" %>
-    <%= f.text_area :note %><br>
-
+    <%= f.text_field :note %>
 
     <%= f.submit "Add new movie", class: "btn btn-success" %>
     <% end %>
+</div>
+
+<div>
+  <h3>Search:</h3>
+  <input type="text" class="form-control" id="search-box">
 </div>
 
 <p></p>
