@@ -9,9 +9,8 @@
   </head>
 
   <body>
-    <div class="container">
       <%= render "layouts/nav_bar" %>
-
+    <div class="container">
       <% flash.each do |type, message|  %>
         <%= content_tag :div, sanitize(message), class: "alert alert_#{type} admin-flash" %>
       <% end %>
