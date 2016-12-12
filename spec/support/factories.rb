@@ -4,4 +4,11 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
   end
+
+  factory :movie do
+    title "Groundhog Day"
+    note "Soooo funny!"
+    watched false
+    user
+  end
 end
