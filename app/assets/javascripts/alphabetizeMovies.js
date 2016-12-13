@@ -1,9 +1,4 @@
-$(document).ready(function() {
-  alphabetizeMovies();
-});
-
-
-var alphabetizeMovies = function() {
+function alphabetizeMovies(){
   $("#sort-alpha-button").on('click', function() {
     $.ajax({
       method: "GET",
@@ -17,4 +12,4 @@ var alphabetizeMovies = function() {
       }
     });
   });
-};
+}

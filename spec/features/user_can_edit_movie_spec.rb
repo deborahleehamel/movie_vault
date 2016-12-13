@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.feature "User can edit a movie" do
+RSpec.feature "User can edit a movie", js: true do
   context "movie has valid title" do
     scenario "changed title appears on page" do
       user = User.create(email: "deb@tnemail.com", password: "password")

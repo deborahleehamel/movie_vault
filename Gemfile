@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -22,11 +23,12 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'pry'
-  gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
 
-
+group :test do
+  gem 'selenium-webdriver', '~> 2.52'
+end
 
 group :development do
   gem 'web-console'
