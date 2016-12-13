@@ -67,6 +67,7 @@
               <td class="movie-status" id="watched-status"><%= link_to "Mark as Watched", movie_path(movie, watched: true), method: :patch %>
               </td>
               <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+              
             </tr>
           <% end %>
         <% end %>
