@@ -1,4 +1,9 @@
-function alphabetizeMovies() {
+$(document).ready(function() {
+  alphabetizeMovies();
+});
+
+
+var alphabetizeMovies = function() {
   $("#sort-alpha-button").on('click', function() {
     $.ajax({
       method: "GET",
@@ -6,10 +11,10 @@ function alphabetizeMovies() {
       success: function(alphabetizedMovies) {
          $('tbody').empty();
          $.each(alphabetizedMovies, function(index, movie) {
-          var movieHtmlElement = $("<tr><td>" + movie.title + "</td> <td> "+ movie.note + "</td> <td>" + movie.watched +"</td> </tr>");
+          var movieHtmlElement = $("<tr><td>" + movie.title + "</td> <td> "+ movie.url + "</td> <td>" + movie.read +"</td> </tr>");
            $('tbody').append(movieHtmlElement);
          });
       }
     });
   });
-}
+};
