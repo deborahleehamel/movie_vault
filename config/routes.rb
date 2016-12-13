@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :users, only: [:new, :create]
-  resources :movies, only: [:index, :create, :update, :edit, :show]
+  resources :movies, only: [:index, :create, :update, :edit, :show, :destroy]
   resources :tags, only: [:index, :show]
 
   get '/login', to: 'sessions#new'
