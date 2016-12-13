@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "authenticated user can add a movie", js: true do
+RSpec.feature "authenticated user can add a movie"do
 
   context "valid movie title submitted" do
     scenario "sees link appear on index page" do
