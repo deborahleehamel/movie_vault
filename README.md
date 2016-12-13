@@ -1,6 +1,6 @@
 # Movie Vault
 
-## LIVE in production at [LIVE Heroku link](https://glacial-retreat-21796.herokuapp.com/)
+## LIVE in production at [Heroku link](https://glacial-retreat-21796.herokuapp.com/)
 
 MovieVault is a small application for saving movies you might want to watch again or later.
 
