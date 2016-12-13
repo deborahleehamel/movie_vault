@@ -39,5 +39,5 @@ describe "All Movies" do
 			expect(movie['user_id']).to eq(added_movie.user_id)
 		end
 	end
-	
+
 end

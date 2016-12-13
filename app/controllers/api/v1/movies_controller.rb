@@ -5,10 +5,11 @@ class Api::V1::MoviesController < ApplicationController
     render json: @movies
   end
 
-  def update
+  def update(movie_params)
     movie = Movie.find[params[:id]]
     if params[:watched]
       movie.watched = !movie.watched
+      movie.update(movie_params)
       movie.save
       render json: movie
     end
