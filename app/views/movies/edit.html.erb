@@ -8,6 +8,9 @@
 			<%= f.label :note, "Note" %>
 			<%= f.text_area :note %><br><br>
 
+			<%= f.label :tag_list, 'Tags (separated by commas)' %>
+	    <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
+
 			<%= f.submit "Update Movie", class: "btn btn-success" %>
 		<% end %>
 	</div>

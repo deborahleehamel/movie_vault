@@ -11,6 +11,9 @@
     <%= f.label :note, "Note" %>
     <%= f.text_field :note %>
 
+    <%= f.label :tag_list, 'Tags (separated by commas)' %>
+    <%= f.text_field :tag_list, value: f.object.tag_list.to_s %>
+
     <%= f.submit "Add new movie", class: "btn btn-success" %>
     <% end %>
 </div>
@@ -39,6 +42,7 @@
         <tr>
             <th>Title</th>
             <th>Note</th>
+            <th>Tags</th>th>
             <th>Watched/Unwatched</th>
             <th>Edit</th>
         </tr>
@@ -50,6 +54,7 @@
             <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="movie watched" data-status="Watched">
               <td class="movie-title"><%= movie.title %></td>
               <td class="movie-note"><%= movie.note %></td>
+              <td class="movie-tag"><%= render movie.tags %></td>
               <td class="movie-status" id="watched-status"><%= link_to "Mark as Unwatched", movie_path(movie, watched: false), method: :patch %>
               </td>
               <td><%= link_to "Edit", edit_movie_path(movie) %></td>
@@ -58,6 +63,7 @@
             <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="movie unwatched" data-status="Unwatched">
               <td class="movie-title"><%= movie.title %></td>
               <td class="movie-note"><%= movie.note %></td>
+                <td class="movie-tag"><%= render movie.tags %></td>
               <td class="movie-status" id="watched-status"><%= link_to "Mark as Watched", movie_path(movie, watched: true), method: :patch %>
               </td>
               <td><%= link_to "Edit", edit_movie_path(movie) %></td>
