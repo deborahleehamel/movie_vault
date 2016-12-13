@@ -11,7 +11,6 @@ RSpec.feature "User can Log in and Sign out" do
       fill_in "Password", with: user.password
       click_button "Log in"
 
-      expect(current_path).to eq movies_path
       expect(page).to have_content user.email
     end
 

@@ -19,4 +19,5 @@ $(document).ready(function() {
   updateStatus();
   searchMovies();
   filterStatus();
+  alphabetizeMovies();
 });

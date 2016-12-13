@@ -79,6 +79,8 @@ GEM
       factory_girl (~> 4.7.0)
       railties (>= 3.0.0)
     ffi (1.9.14)
+    figaro (1.1.1)
+      thor (~> 0.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -171,7 +173,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    selenium-webdriver (3.0.3)
+    selenium-webdriver (2.53.4)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
@@ -220,6 +222,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   factory_girl_rails
+  figaro
   jbuilder (~> 2.5)
   jquery-rails
   launchy
@@ -230,7 +233,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rspec-rails
   sass-rails (>= 3.2)
-  selenium-webdriver
+  selenium-webdriver (~> 2.52)
   shoulda-matchers
   simplecov
   tzinfo-data
