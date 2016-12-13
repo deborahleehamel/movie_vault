@@ -16,8 +16,8 @@
 //= require_tree .
 
 $(document).ready(function() {
-  // updateStatus(id, status);
   updateStatus();
   searchMovies();
   filterStatus();
+  alphabetizeMovies();
 });

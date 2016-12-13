@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :movies, only: [:update]
+      get '/movies/alphabetize_movies', to: 'movies#index'
+      resources :movies, only: [:index, :update]
     end
   end
 

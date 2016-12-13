@@ -25,6 +25,11 @@
     <%= select("movie", "filter_status", ["All", "Watched", "Unwatched"], selected: "All") %>
 </div>
 
+<div id='sort-alpha' class="text-center">
+<!-- <h3>Click to Alphabetize List:</h3> -->
+  <button id='sort-alpha-button'>Alphabetize this List Now</button>
+</div>
+
 <p></p>
 <p></p>
 <div id="return-data" class="panel panel-default">
@@ -42,8 +47,8 @@
 
         <% current_user.movies.each do |movie| %>
           <% if movie.watched %>
-            <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="moive watched" data-status="Watched">
-              <td classs="movie-title"><%= movie.title %></td>
+            <tr raw-id="<%= movie.id %>" id="movie-<%= movie.id %>" class="movie watched" data-status="Watched">
+              <td class="movie-title"><%= movie.title %></td>
               <td class="movie-note"><%= movie.note %></td>
               <td class="movie-status" id="watched-status"><%= link_to "Mark as Unwatched", movie_path(movie, watched: false), method: :patch %>
               </td>
@@ -56,7 +61,6 @@
               <td class="movie-status" id="watched-status"><%= link_to "Mark as Watched", movie_path(movie, watched: true), method: :patch %>
               </td>
               <td><%= link_to "Edit", edit_movie_path(movie) %></td>
-
             </tr>
           <% end %>
         <% end %>
