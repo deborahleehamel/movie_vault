@@ -6,7 +6,7 @@ function alphabetizeMovies(){
       success: function(alphabetizedMovies) {
          $('tbody').empty();
          $.each(alphabetizedMovies, function(index, movie) {
-          var movieHtmlElement = $("<tr><td>" + movie.title + "</td> <td> "+ movie.url + "</td> <td>" + movie.read +"</td> </tr>");
+          var movieHtmlElement = $("<tr><td>" + movie.title + "</td> <td> "+ movie.note + "</td> <td>" + "</td><td>" + movie.watched +"</td> </tr>");
            $('tbody').append(movieHtmlElement);
          });
       }
