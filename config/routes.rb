@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root to: "home#show"
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      patch '/movies/update_watched_status', to: 'movies#update'
       get '/movies/alphabetize_movies', to: 'movies#index'
       resources :movies, only: [:index, :update]
     end
